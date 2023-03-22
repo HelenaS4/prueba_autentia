@@ -1,0 +1,13 @@
+{
+    "data": [
+        {
+            "payment_owner": {
+                "id": 1,
+                "name": "Elenilla"
+            },
+            "import": 3000,
+            "description": "Pa pipas",
+            "date": "2023-03-22"
+        }
+    ]
+}
