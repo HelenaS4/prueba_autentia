@@ -1,8 +1,10 @@
+import FormSignIn from "../components/SignForm/FormSignIn"
+
 const SignInPage = () => {
     return (
         <>
-            <h1>Holap</h1>
-         // TODO: Formulario inicio sesión
+            
+            <FormSignIn/>
 
         </>
     )
