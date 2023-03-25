@@ -7,9 +7,9 @@ const HomeMenu = () => {
         <>
             <nav className="navMenu">
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/Expenses">Gastos</NavLink>
-                <NavLink to="/Friends">Amigos</NavLink>
-                <NavLink to="/Balance">Balance</NavLink>
+                <NavLink to="/expenses">Gastos</NavLink>
+                <NavLink to="/friends">Amigos</NavLink>
+                <NavLink to="/balance">Balance</NavLink>
                 <div className="dot"></div>
             </nav>
         </>
