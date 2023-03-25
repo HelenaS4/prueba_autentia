@@ -13,6 +13,7 @@ const AuthRoute = (props:any) => {
             if(user) {
                 setLoading(false);
             } else {
+                localStorage.clear();
                 navigate('/signIn')
             }
             

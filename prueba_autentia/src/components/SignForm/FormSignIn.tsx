@@ -3,6 +3,10 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom';
 import './FormSignInStyles.css'
 
+import shared_expenses from '../../data/shared_expenses.json'
+import friends from '../../data/friends.json'
+import friends_group from '../../data/friend_group.json'
+
 const FormSignIn = (props:any) => {
     const auth = getAuth();
     const navigate = useNavigate();
@@ -13,7 +17,9 @@ const FormSignIn = (props:any) => {
 
         signInWithPopup(auth, new GoogleAuthProvider())
         .then(response => {
-            console.log(response.user.uid);
+            localStorage.setItem('shared_expenses', JSON.stringify(shared_expenses));
+            localStorage.setItem('friends', JSON.stringify(friends));
+            localStorage.setItem('friends_group', JSON.stringify(friends_group));
             navigate('/')
         }).catch(error => {
             console.log(error);
