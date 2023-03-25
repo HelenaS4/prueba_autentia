@@ -15,12 +15,17 @@ import ExpensesPage from './pages/Expenses/ExpensesPage';
 import FriendsPage from './pages/Friends/FriendsPage';
 import ErrorPage from './pages/ErrorPage';
 import BalancePage from './pages/BalancePage';
+import SignInPage from './pages/SignInPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
     errorElement: <ErrorPage/>
+  },
+  {
+    path: "/signIn",
+    element: <SignInPage/>
   },
   {
     path: "/expenses",
