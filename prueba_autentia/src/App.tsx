@@ -13,7 +13,6 @@ function App() {
 
   return (
     <>
-      <SignInPage/>
       <AuthRoute>
         <HomePage/>
       </AuthRoute>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -78,4 +79,78 @@ body {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
+}
+
+.logout-div {
+  width: 200%;
+}
+
+.logout-button {
+  background-color: #272727;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #ffeba7;
+}
+
+.gg-log-out {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 6px;
+  height: 16px;
+  border: 2px solid;
+  transform: scale(var(--ggs,1));
+  border-right: 0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  margin-left: -10px;
+  font-size: 0.75rem;
+}
+.gg-log-out::after,
+.gg-log-out::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute
+}
+.gg-log-out::after {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(-45deg);
+  width: 8px;
+  height: 8px;
+  left: 4px;
+  bottom: 2px
+}
+.gg-log-out::before {
+  border-radius: 3px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+  left: 5px;
+  bottom: 5px
 }

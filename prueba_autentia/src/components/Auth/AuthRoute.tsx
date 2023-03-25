@@ -9,17 +9,18 @@ const AuthRoute = (props:any) => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        AuthCheck()
+        const AuthCheck = onAuthStateChanged(auth, (user) => {
+            if(user) {
+                setLoading(false);
+            } else {
+                navigate('/signIn')
+            }
+            
+        });
+        return () => AuthCheck();
     }, [auth])
 
-    const AuthCheck = onAuthStateChanged(auth, (user) => {
-        if(user) {
-            setLoading(false);
-        } else {
-            console.log("Access denied");
-            navigate('/signIn')
-        }
-    });
+    
 
     if(loading) return <p>Loading...</p>
 
