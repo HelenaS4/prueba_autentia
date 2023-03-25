@@ -17,9 +17,16 @@ const FormSignIn = (props:any) => {
 
         signInWithPopup(auth, new GoogleAuthProvider())
         .then(response => {
+            const user_data = {
+                id: 9,
+                name: response.user.displayName
+            }
+
+            localStorage.setItem('user_data', JSON.stringify(user_data))
             localStorage.setItem('shared_expenses', JSON.stringify(shared_expenses));
             localStorage.setItem('friends', JSON.stringify(friends));
             localStorage.setItem('friends_group', JSON.stringify(friends_group));
+            
             navigate('/')
         }).catch(error => {
             console.log(error);
