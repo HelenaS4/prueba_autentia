@@ -111,3 +111,7 @@ select:focus {
 .tabs .tab-2:last-child [type="radio"]:checked + div {
     margin-left: -100%; 
 }
+
+li {
+    list-style-type: none;
+}

@@ -33,8 +33,10 @@ const NewExpenseForm = () => {
         <>
             <h1>Add a new expense note</h1>
             <form id="expenseForm" onSubmit={handleSubmitNewExpense}>
-                <input type="number" name="amount" className="expense-input" placeholder="Write the amount" value={amount} onChange={e => setAmount(e.target.value)}/>
-                <input type="text" name="description" className="expense-input" placeholder="Write the description" value={description} onChange={e => setDescription(e.target.value)}/>
+                <input type="number" name="amount" className="expense-input" placeholder="Write the amount" 
+                value={amount} onChange={e => setAmount(e.target.value)}/>
+                <input type="text" name="description" className="expense-input" placeholder="Write the description" 
+                value={description} onChange={e => setDescription(e.target.value)}/>
                 <input type="submit" className="submit-button" value="Add an expense"/>
             </form>
         </>

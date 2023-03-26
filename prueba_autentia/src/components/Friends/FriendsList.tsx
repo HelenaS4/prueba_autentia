@@ -4,12 +4,13 @@ const FriendsList = () => {
     return (
         <>
             <h1>Friends!</h1>
-            <ul>
-                {friends_group.data.map((friend:any) => (
-                    <li key={friend.friend.id}>{friend.friend.name}</li>
-                ))}
-            </ul>
-            
+            <div className="container">
+                <ul>
+                    {friends_group.data.map((friend:any) => (
+                        <li key={friend.id}>{friend.name}</li>
+                    ))}
+                </ul>
+            </div>
         </>
     )
 }

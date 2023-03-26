@@ -46,6 +46,7 @@ select:focus {
     flex-wrap: wrap;
     overflow: hidden; 
     width: 200%;
+    transform: translate(-25%);
 }
 .tabs [class^="tab"] label,
 .tabs [class*=" tab"] label {
