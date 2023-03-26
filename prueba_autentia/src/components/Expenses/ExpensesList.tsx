@@ -1,7 +1,11 @@
 const ExpensesList = () => {
     const shared_expenses = JSON.parse(localStorage.getItem('shared_expenses') || '{}');
 
-    const convertToTime = (shared_expenses_date:string) => {
+    const sorted_shared_expenses = shared_expenses.data.sort((shared_expense_1: any, shared_expense_2: any) => {
+        return (new Date(shared_expense_2.date)).getTime() - (new Date(shared_expense_1.date)).getTime()
+    })
+
+    const convertToTime = (shared_expenses_date:string|Date) => {
         let now = new Date();
         let date = new Date(shared_expenses_date);
 
@@ -33,15 +37,15 @@ const ExpensesList = () => {
         if (interval > 1) {
             return interval + ' minutes ago';
         }
-        
-        if (seconds < 10) return 'Just now';
 
+        if (seconds < 10 || interval <= 1) return 'Just now';
+        console.log(interval, seconds)
     }
-    
+
     return (
         <>
             <h1>Expenses</h1>
-           
+
             <div className="container">
 	            <table>
                     <thead>
@@ -53,8 +57,8 @@ const ExpensesList = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {shared_expenses.data.map((shared_expense:any) => (
-                            <tr key={shared_expense.id}> 
+                        {sorted_shared_expenses.map((shared_expense:any) => (
+                            <tr key={shared_expense.id}>
                                 <td>{shared_expense.payment_owner.name}</td>
                                 <td>{shared_expense.amount}</td>
                                 <td>{shared_expense.description}</td>
