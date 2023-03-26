@@ -1,9 +1,7 @@
 import { NavLink } from 'react-router-dom'
-import { getAuth, signOut } from 'firebase/auth'
 import './HeaderStyles.css'
 
 const Header = () => {
-    const auth = getAuth();
 
     return (
         <>

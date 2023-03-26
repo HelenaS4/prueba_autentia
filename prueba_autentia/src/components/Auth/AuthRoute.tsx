@@ -13,7 +13,9 @@ const AuthRoute = (props:any) => {
             if(user) {
                 setLoading(false);
             } else {
-                localStorage.clear();
+                localStorage.removeItem('friends');
+                localStorage.removeItem('friends_group');
+                localStorage.removeItem('user_data');
                 navigate('/signIn')
             }
             

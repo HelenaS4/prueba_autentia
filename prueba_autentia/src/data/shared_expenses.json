@@ -1,13 +1,24 @@
 {
     "data": [
         {
+            "id": 1,
             "payment_owner": {
                 "id": 1,
                 "name": "Elenilla"
             },
-            "import": 3000,
+            "amount": 3000,
             "description": "Pa pipas",
             "date": "2023-03-22"
+        },
+        {
+            "id": 2,
+            "payment_owner": {
+                "id": 4,
+                "name": "Claramente"
+            },
+            "amount": 2000,
+            "description": "Pa kinder",
+            "date": "2023-03-24"
         }
     ]
 }
