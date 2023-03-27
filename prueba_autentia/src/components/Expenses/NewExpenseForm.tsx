@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './NewExpenseForm.css'
 
 const session_user = JSON.parse(localStorage.getItem('user_data') || '{}');
+const expenses = JSON.parse(localStorage.getItem('shared_expenses') || '{}');
 
 const NewExpenseForm = () => {
     const [amount, setAmount] = useState('');
@@ -9,7 +10,7 @@ const NewExpenseForm = () => {
 
     const handleSubmitNewExpense = (e:any) => {
         e.preventDefault();
-        let expenses = JSON.parse(localStorage.getItem('shared_expenses') || '{}');
+        
         let last_expense = expenses.data[expenses.data.length - 1];
         let new_expense_id = last_expense.id + 1;
 

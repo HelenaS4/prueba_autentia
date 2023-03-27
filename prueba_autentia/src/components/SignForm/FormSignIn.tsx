@@ -17,8 +17,10 @@ const FormSignIn = (props:any) => {
 
         signInWithPopup(auth, new GoogleAuthProvider())
         .then(response => {
-            localStorage.setItem('shared_expenses', JSON.stringify(shared_expenses));
-            localStorage.setItem('friends', JSON.stringify(friends));
+            if (!localStorage.getItem('friends') && !localStorage.getItem('shared_expenses')) {
+                localStorage.setItem('shared_expenses', JSON.stringify(shared_expenses));
+                localStorage.setItem('friends', JSON.stringify(friends));
+            }
             localStorage.setItem('friends_group', JSON.stringify(friends_group));
 
             let friends_data = JSON.parse(localStorage.getItem('friends') || '{}');
@@ -27,12 +29,16 @@ const FormSignIn = (props:any) => {
 
             const user_data = {
                 id: new_id,
-                name: response.user.displayName
+                name: response.user.displayName as string,
+                uuid: response.user.uid
+            }
+
+            if (friends.data.find(t => t.uuid != user_data.uuid)) {
+                friends.data.push(user_data)
+                localStorage.setItem('friends', JSON.stringify(friends))
             }
 
             localStorage.setItem('user_data', JSON.stringify(user_data))
-            
-            
             navigate('/')
         }).catch(error => {
             console.log(error);

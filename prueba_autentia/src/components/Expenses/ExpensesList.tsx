@@ -1,6 +1,4 @@
-const shared_expenses = JSON.parse(localStorage.getItem('shared_expenses') || '{}');
-const friends_group = JSON.parse(localStorage.getItem('friends_group') || '{}');
-const session_user = JSON.parse(localStorage.getItem('user_data') || '{}');
+
 
 const getFriendsGroupExpenses = (shared_expenses:any, friends_group:any, session_user:any) => {
     const friends_group_expenses:any = [];
@@ -56,6 +54,9 @@ const convertToTime = (shared_expenses_date:string|Date) => {
 }
 
 const ExpensesList = () => {
+    const shared_expenses = JSON.parse(localStorage.getItem('shared_expenses') || '{}');
+    const friends_group = JSON.parse(localStorage.getItem('friends_group') || '{}');
+    const session_user = JSON.parse(localStorage.getItem('user_data') || '{}');
     
     const friends_group_expenses = getFriendsGroupExpenses(shared_expenses, friends_group, session_user);
 
