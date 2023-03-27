@@ -1,18 +1,18 @@
 import AuthRoute from "../components/Auth/AuthRoute"
-import BalanceList from "../components/Balance/BalanceList"
 import Footer from "../components/Footer/Footer"
+import FriendTab from "../components/Friends/FriendTab"
 import Header from "../components/Header/Header"
 
-const BalancePage = () => {
+const FriendsPage = () => {
     return (
         <>
             <AuthRoute>
                 <Header/>
-                <BalanceList/>
+                <FriendTab/>
                 <Footer/>
             </AuthRoute>
         </>
     )
 }
 
-export default BalancePage
+export default FriendsPage

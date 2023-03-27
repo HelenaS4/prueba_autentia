@@ -1,0 +1,5 @@
+.container {
+    min-height: 49vh;
+    display: flex;
+    flex-direction: column;
+}

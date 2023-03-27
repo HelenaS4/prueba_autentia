@@ -9,7 +9,6 @@ const Header = () => {
   	        <label htmlFor="menu-icon"></label>
   	        <nav className="nav"> 		
   		        <ul className="pt-5">
-                    <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/expenses">Expenses</NavLink></li>
                     <li><NavLink to="/friends">Friends</NavLink></li>
                     <li><NavLink to="/balance">Balance</NavLink></li>

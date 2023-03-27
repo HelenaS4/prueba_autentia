@@ -8,9 +8,6 @@ const HomeMenu = () => {
 
     return (
         <>
-            <div className='logout-div'>
-                <button className='logout-button' onClick={() => signOut(auth)}><i className="gg-log-out"></i></button>
-            </div>
             <nav className="navMenu">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/expenses">Gastos</NavLink>

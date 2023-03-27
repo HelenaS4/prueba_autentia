@@ -7,8 +7,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import ExpensesPage from './pages/Expenses/ExpensesPage';
-import FriendsPage from './pages/Friends/FriendsPage';
+import ExpensesPage from './pages/ExpensesPage';
+import FriendsPage from './pages/FriendsPage';
 import ErrorPage from './pages/ErrorPage';
 import BalancePage from './pages/BalancePage';
 import SignInPage from './pages/SignInPage';

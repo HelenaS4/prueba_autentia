@@ -21,7 +21,6 @@ const FriendTab = () => {
                         <AddNewFriend/>
                     </div>
                 </div>
-                
             </div>
         </>
     )
