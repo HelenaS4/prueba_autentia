@@ -1,4 +1,4 @@
-
+import "./ExpensesListStyle.css"
 
 const getFriendsGroupExpenses = (shared_expenses:any, friends_group:any, session_user:any) => {
     const friends_group_expenses:any = [];
@@ -85,10 +85,10 @@ const ExpensesList = () => {
                     <tbody>
                         {sorted_shared_expenses.map((friends_group_expenses:any) => (
                             <tr key={friends_group_expenses.id}>
-                                <td>{friends_group_expenses.payment_owner.name}</td>
-                                <td>{friends_group_expenses.amount} €</td>
-                                <td>{friends_group_expenses.description}</td>
-                                <td>{convertToTime(friends_group_expenses.date)}</td>
+                                <td><span>{friends_group_expenses.payment_owner.name}</span></td>
+                                <td><span>{friends_group_expenses.amount} €</span></td>
+                                <td><span>{friends_group_expenses.description}</span></td>
+                                <td><span>{convertToTime(friends_group_expenses.date)}</span></td>
                             </tr>
                         ))}
                     </tbody>

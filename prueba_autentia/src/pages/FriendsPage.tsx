@@ -3,14 +3,18 @@ import Footer from "../components/Footer/Footer"
 import FriendTab from "../components/Friends/FriendTab"
 import Header from "../components/Header/Header"
 
+import "./PageStyle.css"
+
 const FriendsPage = () => {
     return (
         <>
-            <AuthRoute>
-                <Header/>
-                <FriendTab/>
-                <Footer/>
-            </AuthRoute>
+            <div className="container">
+                <AuthRoute>
+                    <Header/>
+                    <FriendTab/>
+                    <Footer/>
+                </AuthRoute>
+            </div>
         </>
     )
 }
