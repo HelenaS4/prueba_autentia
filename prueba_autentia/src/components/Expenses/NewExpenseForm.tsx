@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import './NewExpenseForm.css'
 
-const session_user = JSON.parse(localStorage.getItem('user_data') || '{}');
-const expenses = JSON.parse(localStorage.getItem('shared_expenses') || '{}');
-
 const NewExpenseForm = () => {
+    const session_user = JSON.parse(localStorage.getItem('user_data') || '{}');
+    const expenses = JSON.parse(localStorage.getItem('shared_expenses') || '{}');
     const [amount, setAmount] = useState('');
     const [description, setDescription] = useState('');
 

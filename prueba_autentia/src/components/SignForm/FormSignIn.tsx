@@ -33,9 +33,11 @@ const FormSignIn = (props:any) => {
                 uuid: response.user.uid
             }
 
-            if (friends.data.find(t => t.uuid != user_data.uuid)) {
-                friends.data.push(user_data)
-                localStorage.setItem('friends', JSON.stringify(friends))
+            let user_uuid_exists = friends_data.data.find((friends:any) => friends.uuid == user_data.uuid);
+
+            if (!user_uuid_exists) {
+                friends_data.data.push(user_data);
+                localStorage.setItem('friends', JSON.stringify(friends_data));
             }
 
             localStorage.setItem('user_data', JSON.stringify(user_data))
