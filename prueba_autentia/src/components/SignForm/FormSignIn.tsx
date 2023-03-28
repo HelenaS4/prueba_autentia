@@ -6,6 +6,7 @@ import './FormSignInStyles.css'
 import shared_expenses from '../../data/shared_expenses.json'
 import friends from '../../data/friends.json'
 import friends_group from '../../data/friend_group.json'
+import logo from '../../assets/logo.png'
 
 const FormSignIn = (props:any) => {
     const auth = getAuth();
@@ -56,18 +57,14 @@ const FormSignIn = (props:any) => {
 
     return (
         <>
-            <div className="container">
-                <div className="left">
-                    <div className="login">Login</div>
-                    <div className="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read</div>
-                </div>
-                <div className="right">
-                    <div className="form">
+            <div className="login-container">
+                    <img src={logo} alt="logo" id="img-logo"/>
+                    <h1 id="titulo-login">Prueba Autentia</h1>
+                    <div className="login">
                         <button className="button-64" role="button" onClick={() => signInWithGoogle()}>
                             <span className="text">Login!</span>
                         </button>
                     </div>
-                </div>
             </div>
         </>
     )

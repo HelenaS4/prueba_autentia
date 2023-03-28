@@ -6,17 +6,13 @@ const getFriendsGroupExpenses = (shared_expenses:any, friends_group:any, session
     for (const expense of shared_expenses.data) {
         for (const friend of friends_group.data) {
             if (friend.id == expense.payment_owner.id) {
-                console.log(friend)
                 friends_group_expenses.push(expense);
             }
         }
         if (session_user.id == expense.payment_owner.id) {
-            console.log(session_user)
             friends_group_expenses.push(expense);
         }
     }
-
-    console.log(friends_group_expenses)
 
     return friends_group_expenses;
 }
