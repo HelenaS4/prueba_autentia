@@ -1,5 +1,4 @@
 import AddNewFriend from "./AddNewFriend"
-import CreateNewFriend from "./CreateNewFriend"
 import FriendsList from "./FriendsList"
 import './FriendTab.css'
 

@@ -7,7 +7,7 @@ const FriendsList = () => {
             <div className="container">
                 <ul>
                     {friends_group.data.map((friend:any) => (
-                        <li key={friend.id}>{friend.name}</li>
+                        <li key={friend.id} style={{marginTop: '20px'}}><span style={{fontSize: '30px'}}>{friend.name}</span></li>
                     ))}
                 </ul>
             </div>
