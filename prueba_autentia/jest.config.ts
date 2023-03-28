@@ -10,7 +10,7 @@ export default async (): Promise<Config.InitialOptions> => {
       "<rootDir>/jest.config.ts"
     ],
     "moduleNameMapper": {
-        "\\.(css|scss)$": "<rootDir>/src/__tests__/SignIn.test.tsx"
+        "\\.(css|scss)$": "<rootDir>/src/__test__/SignIn.test.tsx"
       }
   };
 };
