@@ -11,42 +11,19 @@ h1 {
     line-height: 0.8em;
     color: rgba(255,255,255,0.2);
 }
-.made-with {
-    background: #ffeba7;
-    color: #fff;
-    display: block;
-    font-size: 12px;
-    line-height: 1em;
-    margin: 0;
-    padding: 5px 110px;
-    position: fixed;
-    top: 20px;
-    right: -100px;
-    text-align: center;
-    text-decoration: none;
-    transform: rotate(45deg);
-}
-.documentation {
-    color: #ffeba7;
-}
-button:focus,
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-}
 
 .tabs {
-    display: block;
+    display: inline-block;
     display: -webkit-flex;
     display: -moz-flex;
-    display: flex;
     -webkit-flex-wrap: wrap;
     -moz-flex-wrap: wrap;
     flex-wrap: wrap;
     overflow: hidden; 
-    width: 200%;
+    width: 100%;
     transform: translate(-25%);
+    height: 100%;
+    margin-left: 25%;
 }
 .tabs [class^="tab"] label,
 .tabs [class*=" tab"] label {

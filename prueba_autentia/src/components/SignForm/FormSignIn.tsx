@@ -60,7 +60,7 @@ const FormSignIn = (props:any) => {
             <div className="login-container">
                     <img src={logo} alt="logo" id="img-logo"/>
                     <h1 id="titulo-login">Prueba Autentia</h1>
-                    <div className="login">
+                    <div className="login-button">
                         <button className="button-64" role="button" onClick={() => signInWithGoogle()}>
                             <span className="text">Login!</span>
                         </button>
